@@ -1,7 +1,6 @@
 import requests
-from bs4 import BeautifulSoup
 
-URL = "https://onlineradiobox.com/se/mixmegapol/playlist/"
+URL = "https://onlineradiobox.com/json/se.mixmegapol/playlist/"
 
 headers = {
     "User-Agent": (
@@ -15,17 +14,16 @@ def fetch_songs():
     response = requests.get(URL, headers=headers, timeout=10)
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.text, "html.parser")
-    rows = soup.select("table.table.table-hover tbody tr")
+    data = response.json()
 
     songs = []
-    for row in rows:
-        cols = row.find_all("td")
-        if len(cols) >= 3:
-            artist = cols[1].text.strip()
-            title = cols[2].text.strip()
+    for item in data.get("data", []):
+        artist = item.get("artist", "").strip()
+        title = item.get("title", "").strip()
+        if artist and title:
             songs.append(f"{artist} - {title}")
 
+    # ta bort dubbletter men behåll ordning
     return list(dict.fromkeys(songs))
 
 songs = fetch_songs()
