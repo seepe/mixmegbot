@@ -1,0 +1,33 @@
+name: Update Mix Megapol Playlist
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # kör varje hel timme
+  workflow_dispatch:       # gör att du kan köra manuellt
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run update script
+        run: python update.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "MixMegBot"
+          git config --global user.email "bot@example.com"
+          git add mixmeg.txt
+          git commit -m "Auto-update playlist" || echo "No changes"
+          git push
