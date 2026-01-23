@@ -19,10 +19,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests
 
       - name: Run update script
-        run: python update.py
+        run: python main.py
 
       - name: Commit changes
         run: |
