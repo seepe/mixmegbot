@@ -12,12 +12,14 @@ STATIONS = {
 
 BASE_URL = "https://prod.radio-api.net/stations/{}/songs"
 
+
 def fetch_songs(station_id):
     url = BASE_URL.format(station_id)
     r = requests.get(url, timeout=10)
     r.raise_for_status()
     data = r.json()
     return [item["rawInfo"] for item in data if item.get("rawInfo")]
+
 
 def update_history(station_id, songs):
     path = f"stations/{station_id}/{station_id}.txt"
@@ -36,8 +38,10 @@ def update_history(station_id, songs):
 
     return combined
 
+
 def generate_html(station_id, station_name, songs):
     html_path = f"stations/{station_id}/{station_id}.html"
+
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(f"<h1>{station_name}</h1>\n")
         f.write("<ul>\n")
@@ -45,8 +49,11 @@ def generate_html(station_id, station_name, songs):
             f.write(f"<li>{s}</li>\n")
         f.write("</ul>\n")
 
+
 for station_id, station_name in STATIONS.items():
     print(f"Uppdaterar {station_name}...")
     songs = fetch_songs(station_id)
     history = update_history(station_id, songs)
     generate_html(station_id, station_name, history)
+
+print("Alla stationer uppdaterade.")
