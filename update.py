@@ -27,9 +27,11 @@ def fetch_songs():
 # Hämta nya låtar från API
 new_songs = fetch_songs()
 
-# Läs gamla låtar från mixmeg.txt om den finns
-if os.path.exists("mixmeg.txt"):
-    with open("mixmeg.txt", "r", encoding="utf-8") as f:
+# Läs gamla låtar från mixmegbot/mixmeg.txt
+path = "mixmegbot/mixmeg.txt"
+
+if os.path.exists(path):
+    with open(path, "r", encoding="utf-8") as f:
         old_songs = [line.strip() for line in f if line.strip()]
 else:
     old_songs = []
@@ -38,7 +40,7 @@ else:
 combined = list(dict.fromkeys(old_songs + new_songs))
 
 # Spara tillbaka
-with open("mixmeg.txt", "w", encoding="utf-8") as f:
+with open(path, "w", encoding="utf-8") as f:
     f.write("\n".join(combined))
 
 print(f"Gamla låtar: {len(old_songs)}")
