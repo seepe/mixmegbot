@@ -145,7 +145,7 @@ def generate_index_html(timestamp):
         f.write(html)
 
 
-timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%H:%M")
 
 for station_id, station_name in STATIONS.items():
     print(f"Uppdaterar {station_name}...")
