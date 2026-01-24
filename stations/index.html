@@ -1,46 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>Radiostationer</title>
 <link rel="stylesheet" href="stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<h1 class="index-title">Radiostationer</h1>
-<div class="timestamp">Senast uppdaterad: 22:17</div>
+<body class="dark">
 
-<div class="container">
+<nav class="navbar">
+  <div class="logo">📻 Radiostationer</div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
 
-<a class="station" href="mixmegapol/mixmegapol.html">
-    <div class="dot green"></div>
-    Mix Megapol
-</a>
+<main class="content">
 
-<a class="station" href="banditrock/banditrock.html">
-    <div class="dot green"></div>
-    Bandit Rock
-</a>
+  <header class="header-area">
+    <h1>Radiostationer</h1>
+    <p class="timestamp">Senast uppdaterad: 22:25</p>
+  </header>
 
-<a class="station" href="starfmse/starfmse.html">
-    <div class="dot green"></div>
-    Star FM
-</a>
+  <section class="station-grid">
 
-<a class="station" href="rixfm/rixfm.html">
-    <div class="dot green"></div>
-    RIX FM
-</a>
+    <a class="station-card" href="mixmegapol/mixmegapol.html">
+      <span class="dot green"></span>
+      <span class="station-name">Mix Megapol</span>
+    </a>
 
-<a class="station" href="nrjsweden/nrjsweden.html">
-    <div class="dot green"></div>
-    NRJ Sweden
-</a>
+    <a class="station-card" href="banditrock/banditrock.html">
+      <span class="dot green"></span>
+      <span class="station-name">Bandit Rock</span>
+    </a>
 
-<a class="station" href="lugnafavoriter/lugnafavoriter.html">
-    <div class="dot green"></div>
-    Lugna Favoriter
-</a>
+    <a class="station-card" href="starfmse/starfmse.html">
+      <span class="dot green"></span>
+      <span class="station-name">Star FM</span>
+    </a>
 
-</div>
+    <a class="station-card" href="rixfm/rixfm.html">
+      <span class="dot green"></span>
+      <span class="station-name">RIX FM</span>
+    </a>
+
+    <a class="station-card" href="nrjsweden/nrjsweden.html">
+      <span class="dot green"></span>
+      <span class="station-name">NRJ Sweden</span>
+    </a>
+
+    <a class="station-card" href="lugnafavoriter/lugnafavoriter.html">
+      <span class="dot green"></span>
+      <span class="station-name">Lugna Favoriter</span>
+    </a>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
