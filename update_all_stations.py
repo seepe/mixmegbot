@@ -180,6 +180,10 @@ for station_id, station_name in STATIONS.items():
     print(f"Uppdaterar {station_name}...")
     songs = fetch_songs(station_id)
     history = update_history(station_id, songs)
-    generate_html(station_id, station_name, history)
+
+    # ⭐ Visa bara senaste 500 låtarna i HTML
+    limited_history = history[-500:]
+
+    generate_html(station_id, station_name, limited_history)
 
 print("Alla stationer uppdaterade.")
