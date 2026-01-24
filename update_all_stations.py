@@ -4,7 +4,6 @@ import os
 STATIONS = {
     "mixmegapol": "Mix Megapol",
     "banditrock": "Bandit Rock",
-    "nrjsweden": "NRJ Sweden",
     "lugnafavoriter": "Lugna Favoriter",
     "starfmse": "Star FM",
     "rixfm": "RIX FM"
