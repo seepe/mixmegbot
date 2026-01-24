@@ -154,8 +154,7 @@ def generate_html(station_id, station_name, songs):
 </html>
 """
 
-    # Markera de senaste 5 låtarna som NY!
-    new_limit = 5
+    new_limit = 5  # Markera de senaste 5 som NY!
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
