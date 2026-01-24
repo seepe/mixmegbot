@@ -54,9 +54,8 @@ def update_history(station_id, songs):
     return combined
 
 
-def generate_html(station_id, station_name, songs):
+def generate_station_html(station_id, station_name, songs, api_latest, history_latest):
     html_path = f"stations/{station_id}/{station_id}.html"
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     html_top = f"""<html>
 <head>
@@ -76,24 +75,16 @@ def generate_html(station_id, station_name, songs):
         color: #000;
         padding: 20px;
         text-align: center;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: bold;
-        letter-spacing: 1px;
     }}
 
-    h1 {{
+    .info {{
         text-align: center;
-        color: #1DB954;
-        font-size: 36px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }}
-
-    .timestamp {{
-        text-align: center;
-        color: #bbbbbb;
-        font-size: 16px;
+        margin-top: 20px;
         margin-bottom: 30px;
+        font-size: 18px;
+        color: #cccccc;
     }}
 
     ul {{
@@ -143,10 +134,12 @@ def generate_html(station_id, station_name, songs):
 </head>
 <body>
 
-<div class="banner">{station_name} – Senast uppdaterad: {timestamp}</div>
+<div class="banner">{station_name}</div>
 
-<h1>Spotify-sökningar</h1>
-<div class="timestamp">(Genererad automatiskt)</div>
+<div class="info">
+    Senaste låt från API:t: <b>{api_latest}</b><br>
+    Senaste NY låt i historiken: <b>{history_latest}</b>
+</div>
 
 <ul>
 """
@@ -157,7 +150,7 @@ def generate_html(station_id, station_name, songs):
 </html>
 """
 
-    new_limit = 5  # Markera de senaste 5 som NY!
+    new_limit = 5
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
@@ -179,14 +172,118 @@ def generate_html(station_id, station_name, songs):
         f.write(html_bottom)
 
 
+def generate_index_html(timestamp):
+    html_path = "stations/index.html"
+
+    html = f"""<html>
+<head>
+<meta charset='UTF-8'>
+<title>Radiostationer</title>
+<style>
+    body {{
+        background: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }}
+
+    h1 {{
+        text-align: center;
+        margin-top: 30px;
+        color: #1DB954;
+    }}
+
+    .timestamp {{
+        text-align: center;
+        color: #bbbbbb;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }}
+
+    .container {{
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }}
+
+    .station {{
+        display: block;
+        background: #1e1e1e;
+        border: 2px solid #1DB954;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin: 12px 0;
+        font-size: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+    }}
+
+    .station:hover {{
+        background: #2a2a2a;
+        transform: scale(1.02);
+    }}
+
+    .dot {{
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }}
+
+    .green {{ background: #1DB954; }}
+    .red {{ background: #ff4444; }}
+</style>
+</head>
+<body>
+
+<h1>Radiostationer</h1>
+<div class="timestamp">Senast uppdaterad: {timestamp}</div>
+
+<div class="container">
+"""
+
+    for station_id, station_name in STATIONS.items():
+        html_file = f"stations/{station_id}/{station_id}.html"
+        exists = os.path.exists(html_file)
+        dot_class = "green" if exists else "red"
+
+        html += f"""
+<a class="station" href="{station_id}/{station_id}.html">
+    <div class="dot {dot_class}"></div>
+    {station_name}
+</a>
+"""
+
+    html += """
+</div>
+</body>
+</html>
+"""
+
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+# ⭐ Huvudloop
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+
 for station_id, station_name in STATIONS.items():
     print(f"Uppdaterar {station_name}...")
+
     songs = fetch_songs(station_id)
     history = update_history(station_id, songs)
 
-    # ⭐ HTML ska också visa senaste 500
+    api_latest = songs[0] if songs else "Inga låtar från API"
+    history_latest = history[-1] if history else "Ingen historik"
+
     limited_history = history[-500:]
 
-    generate_html(station_id, station_name, limited_history)
+    generate_station_html(station_id, station_name, limited_history, api_latest, history_latest)
+
+generate_index_html(timestamp)
 
 print("Alla stationer uppdaterade.")
