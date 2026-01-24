@@ -138,6 +138,7 @@ def generate_index_html(timestamp):
   <div class="logo">📻</div>
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
+    <button onclick="fetch('trigger.php')">Kör uppdatering</button>
   </div>
 </nav>
 
