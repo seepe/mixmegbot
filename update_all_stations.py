@@ -138,7 +138,6 @@ def generate_index_html(timestamp):
   <div class="logo">📻</div>
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
-    <button onclick="fetch('trigger.php')">Kör uppdatering</button>
   </div>
 </nav>
 
@@ -166,7 +165,22 @@ def generate_index_html(timestamp):
 
     html += """
   </section>
+html += """
+  </section>
 
+  <!-- Hidden trigger button -->
+  <div class="trigger-wrapper">
+    <button class="trigger-btn" onclick="fetch('trigger.php').then(()=>alert('Uppdatering skickad!'))">
+      ⟳ Uppdatera
+    </button>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+"""
 </main>
 
 <script src="script.js"></script>
