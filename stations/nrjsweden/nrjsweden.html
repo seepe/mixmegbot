@@ -1,100 +1,32 @@
 <html>
 <head>
 <meta charset='UTF-8'>
-<title>NRJ Sweden – Spotifylista</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #121212;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-    }
-
-    .banner {
-        background: #1DB954;
-        color: #000;
-        padding: 20px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        text-align: center;
-        color: #1DB954;
-        font-size: 36px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
-
-    .timestamp {
-        text-align: center;
-        color: #bbbbbb;
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        max-width: 700px;
-        margin: auto;
-    }
-
-    li {
-        background: #1e1e1e;
-        margin: 8px 0;
-        padding: 12px 18px;
-        border-radius: 8px;
-        transition: 0.2s;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    li:hover {
-        background: #2a2a2a;
-        transform: scale(1.02);
-    }
-
-    a {
-        color: #1DB954;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .new-flag {
-        background: #1DB954;
-        color: #000;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-</style>
+<title>NRJ Sweden</title>
+<link rel="stylesheet" href="../stations.css">
 </head>
 <body>
 
-<div class="banner">NRJ Sweden – Senast uppdaterad: 2026-01-24 07:22</div>
+<div class="header">
+    <h1>NRJ Sweden</h1>
+    <div class="underline"></div>
+</div>
 
-<h1>Spotify-sökningar</h1>
-<div class="timestamp">(Genererad automatiskt)</div>
+<div class="info">
+    Senaste låt från API:t: <b>Crush - Zara Larsson</b><br>
+    Senaste NY låt i historiken: <b>Blåögd - Molly Sandén</b>
+</div>
 
-<ul>
+<ul class="songlist">
 <li><a href='https://open.spotify.com/search/Real%20Slim%20Shady%20-%20eminem' target='_blank'>Real Slim Shady - eminem</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Paradise%20-%20Dj%20Snake%20With%20Bipolar%20Sunshine' target='_blank'>Paradise - Dj Snake With Bipolar Sunshine</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Can%27t%20Get%20Enough%20-%20Tribbs%20ft.%20Klara%20Hammarstr%C3%B6m' target='_blank'>Can't Get Enough - Tribbs ft. Klara Hammarström</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Sapphire%20-%20Ed%20Sheeran' target='_blank'>Sapphire - Ed Sheeran</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Mimosa%20-%20Darin' target='_blank'>Mimosa - Darin</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Tusen%20Sp%C3%A4nn%20-%20Tjuvjakt%20ft.%20Fanny%20Avonne' target='_blank'>Tusen Spänn - Tjuvjakt ft. Fanny Avonne</a></li>
+<li><a href='https://open.spotify.com/search/Crush%20-%20Zara%20Larsson' target='_blank'>Crush - Zara Larsson</a></li>
+<li><a href='https://open.spotify.com/search/Azizam%20-%20Ed%20Sheeran' target='_blank'>Azizam - Ed Sheeran</a></li>
+<li><a href='https://open.spotify.com/search/Heaven%20-%20Zedd' target='_blank'>Heaven - Zedd</a></li>
+<li><a href='https://open.spotify.com/search/Bl%C3%A5%C3%B6gd%20-%20Molly%20Sand%C3%A9n' target='_blank'>Blåögd - Molly Sandén</a></li>
 
 </ul>
 </body>

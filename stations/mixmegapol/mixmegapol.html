@@ -1,100 +1,27 @@
 <html>
 <head>
 <meta charset='UTF-8'>
-<title>Mix Megapol – Spotifylista</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #121212;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-    }
-
-    .banner {
-        background: #1DB954;
-        color: #000;
-        padding: 20px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        text-align: center;
-        color: #1DB954;
-        font-size: 36px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
-
-    .timestamp {
-        text-align: center;
-        color: #bbbbbb;
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        max-width: 700px;
-        margin: auto;
-    }
-
-    li {
-        background: #1e1e1e;
-        margin: 8px 0;
-        padding: 12px 18px;
-        border-radius: 8px;
-        transition: 0.2s;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    li:hover {
-        background: #2a2a2a;
-        transform: scale(1.02);
-    }
-
-    a {
-        color: #1DB954;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .new-flag {
-        background: #1DB954;
-        color: #000;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-</style>
+<title>Mix Megapol</title>
+<link rel="stylesheet" href="../stations.css">
 </head>
 <body>
 
-<div class="banner">Mix Megapol – Senast uppdaterad: 2026-01-24 07:22</div>
+<div class="header">
+    <h1>Mix Megapol</h1>
+    <div class="underline"></div>
+</div>
 
-<h1>Spotify-sökningar</h1>
-<div class="timestamp">(Genererad automatiskt)</div>
+<div class="info">
+    Senaste låt från API:t: <b>Trustfall - Pink</b><br>
+    Senaste NY låt i historiken: <b>Allt Jag Har - Darin</b>
+</div>
 
-<ul>
-<li><a href='https://open.spotify.com/search/TESTL%C3%85T123' target='_blank'>TESTLÅT123</a><span class='new-flag'>NY!</span></li>
+<ul class="songlist">
 <li><a href='https://open.spotify.com/search/The%20Best%20-%20Tina%20Turner' target='_blank'>The Best - Tina Turner</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Genom%20Eld%20Och%20Vatten%20-%20Medina' target='_blank'>Genom Eld Och Vatten - Medina</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Unforgivable%20Sinner%20-%20Lene%20Marlin' target='_blank'>Unforgivable Sinner - Lene Marlin</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Just%20The%20Way%20You%20Are%20-%20Bruno%20Mars' target='_blank'>Just The Way You Are - Bruno Mars</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Sorry%20I%27m%20Here%20For%20Someone%20Else%20-%20Benson%20Boone' target='_blank'>Sorry I'm Here For Someone Else - Benson Boone</a></li>
+<li><a href='https://open.spotify.com/search/Sorry%20I%27m%20Here%20For%20Someone%20Else%20-%20Benson%20Boone' target='_blank'>Sorry I'm Here For Someone Else - Benson Boone</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Heaven%20Is%20A%20Place%20On%20Earth%20-%20Belinda%20Carlisle' target='_blank'>Heaven Is A Place On Earth - Belinda Carlisle</a></li>
 <li><a href='https://open.spotify.com/search/Message%20in%20a%20Bottle%20-%20Taylor%20Swift' target='_blank'>Message in a Bottle - Taylor Swift</a></li>
 <li><a href='https://open.spotify.com/search/Straight%20Up%20-%20Paula%20Abdul' target='_blank'>Straight Up - Paula Abdul</a></li>
@@ -131,6 +58,9 @@
 <li><a href='https://open.spotify.com/search/Heroes%20Are%20Calling%20-%20Smash%20Into%20Pieces' target='_blank'>Heroes Are Calling - Smash Into Pieces</a></li>
 <li><a href='https://open.spotify.com/search/One%20And%20One%20-%20Robert%20Miles%20and%20Maria%20Nayler' target='_blank'>One And One - Robert Miles and Maria Nayler</a></li>
 <li><a href='https://open.spotify.com/search/Mercy%20-%20Duffy' target='_blank'>Mercy - Duffy</a></li>
+<li><a href='https://open.spotify.com/search/Trustfall%20-%20Pink' target='_blank'>Trustfall - Pink</a></li>
+<li><a href='https://open.spotify.com/search/Don%27t%20Worry%20Be%20Happy%20-%20Bobby%20McFerrin' target='_blank'>Don't Worry Be Happy - Bobby McFerrin</a></li>
+<li><a href='https://open.spotify.com/search/Allt%20Jag%20Har%20-%20Darin' target='_blank'>Allt Jag Har - Darin</a></li>
 
 </ul>
 </body>

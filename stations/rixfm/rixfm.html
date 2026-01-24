@@ -1,94 +1,22 @@
 <html>
 <head>
 <meta charset='UTF-8'>
-<title>RIX FM – Spotifylista</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #121212;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-    }
-
-    .banner {
-        background: #1DB954;
-        color: #000;
-        padding: 20px;
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        text-align: center;
-        color: #1DB954;
-        font-size: 36px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-    }
-
-    .timestamp {
-        text-align: center;
-        color: #bbbbbb;
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        max-width: 700px;
-        margin: auto;
-    }
-
-    li {
-        background: #1e1e1e;
-        margin: 8px 0;
-        padding: 12px 18px;
-        border-radius: 8px;
-        transition: 0.2s;
-        font-size: 18px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    li:hover {
-        background: #2a2a2a;
-        transform: scale(1.02);
-    }
-
-    a {
-        color: #1DB954;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .new-flag {
-        background: #1DB954;
-        color: #000;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: bold;
-        margin-left: 10px;
-    }
-</style>
+<title>RIX FM</title>
+<link rel="stylesheet" href="../stations.css">
 </head>
 <body>
 
-<div class="banner">RIX FM – Senast uppdaterad: 2026-01-24 07:22</div>
+<div class="header">
+    <h1>RIX FM</h1>
+    <div class="underline"></div>
+</div>
 
-<h1>Spotify-sökningar</h1>
-<div class="timestamp">(Genererad automatiskt)</div>
+<div class="info">
+    Senaste låt från API:t: <b>Westlife - Chariot</b><br>
+    Senaste NY låt i historiken: <b>Jonas Blue - Fast Car</b>
+</div>
 
-<ul>
+<ul class="songlist">
 <li><a href='https://open.spotify.com/search/One%20Direction%20-%20Story%20of%20My%20Life' target='_blank'>One Direction - Story of My Life</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Mark%20Ambor%20-%20Belong%20Together' target='_blank'>Mark Ambor - Belong Together</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/DJ%20Snake%20%26%20Bipolar%20Sunshine%20-%20Paradise' target='_blank'>DJ Snake & Bipolar Sunshine - Paradise</a><span class='new-flag'>NY!</span></li>
@@ -102,6 +30,8 @@
 <li><a href='https://open.spotify.com/search/Justin%20Bieber%20-%20DAISIES' target='_blank'>Justin Bieber - DAISIES</a></li>
 <li><a href='https://open.spotify.com/search/ROS%C3%89%20%26%20Bruno%20Mars%20-%20APT.' target='_blank'>ROSÉ & Bruno Mars - APT.</a></li>
 <li><a href='https://open.spotify.com/search/Darin%20-%20Allt%20jag%20har' target='_blank'>Darin - Allt jag har</a></li>
+<li><a href='https://open.spotify.com/search/Westlife%20-%20Chariot' target='_blank'>Westlife - Chariot</a></li>
+<li><a href='https://open.spotify.com/search/Jonas%20Blue%20-%20Fast%20Car' target='_blank'>Jonas Blue - Fast Car</a></li>
 
 </ul>
 </body>
