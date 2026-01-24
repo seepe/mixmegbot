@@ -30,3 +30,14 @@ jobs:
           git add .
           git commit -m "Daily update" || echo "No changes"
           git push
+
+
+      - name: Upload HTML files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          local_path: "stations"
+          remote_path: ${{ secrets.SFTP_PATH }}
+          sftp_only: true
