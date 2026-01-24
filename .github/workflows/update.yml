@@ -2,7 +2,7 @@ name: Update Radio Stations
 
 on:
   schedule:
-    - cron: "0 * * * *"   # kör varje dag kl 00:00 UTC
+    - cron: "1 * * * *"  
   workflow_dispatch:
 
 jobs:
