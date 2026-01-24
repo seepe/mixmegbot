@@ -27,9 +27,10 @@ def fetch_songs():
 # Hämta nya låtar från API
 new_songs = fetch_songs()
 
-# Läs gamla låtar från mixmegbot/mixmeg.txt
-path = "mixmegbot/mixmeg.txt"
+# Rätt sökväg – filen ligger i samma mapp som update.py
+path = "mixmeg.txt"
 
+# Läs gamla låtar
 if os.path.exists(path):
     with open(path, "r", encoding="utf-8") as f:
         old_songs = [line.strip() for line in f if line.strip()]
