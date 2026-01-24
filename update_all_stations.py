@@ -135,7 +135,7 @@ def generate_index_html(timestamp):
 <body class="dark">
 
 <nav class="navbar">
-  <div class="logo">📻 Radiostationer</div>
+  <div class="logo">📻</div>
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
