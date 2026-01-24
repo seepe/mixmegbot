@@ -20,7 +20,7 @@
 
   <header class="header-area">
     <h1>Radiostationer</h1>
-    <p class="timestamp">Senast uppdaterad: 22:59</p>
+    <p class="timestamp">Senast uppdaterad: 23:24</p>
   </header>
 
   <section class="station-grid">
@@ -56,6 +56,13 @@
     </a>
 
   </section>
+
+  <!-- Hidden trigger button -->
+  <div class="trigger-wrapper">
+    <button class="trigger-btn" onclick="fetch('trigger.php').then(()=>alert('Uppdatering skickad!'))">
+      ⟳ Uppdatera
+    </button>
+  </div>
 
 </main>
 
