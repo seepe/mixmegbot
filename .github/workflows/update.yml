@@ -2,8 +2,10 @@ name: Update Radio Stations
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes (UTC) — consider reducing frequency if not needed
+    - cron: "*/10 * * * *"
   workflow_dispatch:
+  repository_dispatch:
+    types: [run-update]
 
 permissions:
   contents: write
