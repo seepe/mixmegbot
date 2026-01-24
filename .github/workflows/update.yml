@@ -2,8 +2,11 @@ name: Auto-update Mix Megapol Playlist
 
 on:
   schedule:
-    - cron: "*/2 * * * *"   # kör varannan minut
-  workflow_dispatch:        # gör att du kan köra manuellt
+    - cron: "*/5 * * * *"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   update:
