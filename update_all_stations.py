@@ -45,6 +45,9 @@ def update_history(station_id, songs):
 
     combined = list(dict.fromkeys(old + songs))
 
+    # ⭐ Begränsa historiken till senaste 500 låtarna
+    combined = combined[-500:]
+
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(combined))
 
@@ -181,7 +184,7 @@ for station_id, station_name in STATIONS.items():
     songs = fetch_songs(station_id)
     history = update_history(station_id, songs)
 
-    # ⭐ Visa bara senaste 500 låtarna i HTML
+    # ⭐ HTML ska också visa senaste 500
     limited_history = history[-500:]
 
     generate_html(station_id, station_name, limited_history)
