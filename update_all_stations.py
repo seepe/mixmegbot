@@ -7,7 +7,9 @@ STATIONS = {
     "mixmegapol": "Mix Megapol",
     "banditrock": "Bandit Rock",
     "starfmse": "Star FM",
-    "rixfm": "RIX FM"
+    "rixfmse": "RIX FM",
+    "nrjsweden": "NRJ Sweden",
+    "lugnafavoriter": "Lugna Favoriter"
 }
 
 BASE_URL = "https://prod.radio-api.net/stations/{}/songs"
