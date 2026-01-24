@@ -1,9 +1,9 @@
-name: Update Mix Megapol Playlist
+name: Auto-update Mix Megapol Playlist
 
 on:
   schedule:
-    - cron: "0 * * * *"   # kör varje hel timme
-  workflow_dispatch:       # gör att du kan köra manuellt
+    - cron: "*/2 * * * *"   # kör varannan minut
+  workflow_dispatch:        # gör att du kan köra manuellt
 
 jobs:
   update:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Install Python
         uses: actions/setup-python@v4
@@ -19,15 +21,17 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests
 
       - name: Run update script
         run: python update.py
 
-      - name: Commit changes
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "MixMegBot"
           git config --global user.email "bot@example.com"
           git add mixmeg.txt
-          git commit -m "Auto-update playlist" || echo "No changes"
-          git push
+          git commit -m "Auto-update playlist" || echo "No changes to commit"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
