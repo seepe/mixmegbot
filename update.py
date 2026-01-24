@@ -18,10 +18,9 @@ def fetch_songs():
 
     songs = []
     for item in data:
-        artist = item.get("artist", "").strip()
-        title = item.get("title", "").strip()
-        if artist and title:
-            songs.append(f"{artist} - {title}")
+        raw = item.get("rawInfo", "").strip()
+        if raw:
+            songs.append(raw)
 
     return songs
 
