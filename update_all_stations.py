@@ -163,9 +163,8 @@ def generate_index_html(timestamp):
     </a>
 """
 
+    # 🔥 Här lägger vi trigger-knappen — korrekt placerad och inuti strängen
     html += """
-  </section>
-html += """
   </section>
 
   <!-- Hidden trigger button -->
@@ -181,16 +180,9 @@ html += """
 </body>
 </html>
 """
-</main>
-
-<script src="script.js"></script>
-</body>
-</html>
-"""
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
-
 
 # -----------------------------
 # MAIN SCRIPT
