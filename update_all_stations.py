@@ -20,9 +20,11 @@ def fetch_songs(station_id):
 
     try:
         r = requests.get(url, timeout=10)
+
         if r.status_code != 200:
             print(f"⚠️  Hoppar över {station_id}: API gav {r.status_code}")
             return []
+
         data = r.json()
         return [item["rawInfo"] for item in data if item.get("rawInfo")]
 
