@@ -88,7 +88,8 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
 
-        for index, raw in enumerate(songs):
+        # ⭐ NYASTE → ÄLDSTA
+        for index, raw in enumerate(reversed(songs)):
             encoded = urllib.parse.quote(raw)
             spotify_url = f"https://open.spotify.com/search/{encoded}"
 
