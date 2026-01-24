@@ -1,6 +1,7 @@
 import requests
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import urllib.parse
 
 STATIONS = {
