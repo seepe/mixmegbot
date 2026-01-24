@@ -1,5 +1,4 @@
 import requests
-import json
 
 URL = "https://prod.radio-api.net/stations/mixmegapol/songs"
 
