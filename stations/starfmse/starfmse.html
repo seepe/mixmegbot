@@ -1,27 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>Star FM</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 Star FM</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>Star FM</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>Björn Skifs - Michelangelo</b><br>
+      Senaste NY låt i historiken: <b>Alison Moyet - Invisible</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>Duran Duran - A View to a Kill</b><br>
-    Senaste NY låt i historiken: <b>Madonna - La Isla Bonita</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
+<li><a href='https://open.spotify.com/search/Alison%20Moyet%20-%20Invisible' target='_blank'>Alison Moyet - Invisible</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Depeche%20Mode%20-%20Enjoy%20the%20Silence%20' target='_blank'>Depeche Mode - Enjoy the Silence </a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Roxette%20-%20Listen%20to%20Your%20Heart' target='_blank'>Roxette - Listen to Your Heart</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Bj%C3%B6rn%20Skifs%20-%20Michelangelo' target='_blank'>Björn Skifs - Michelangelo</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Madonna%20-%20La%20Isla%20Bonita' target='_blank'>Madonna - La Isla Bonita</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Duran%20Duran%20-%20A%20View%20to%20a%20Kill' target='_blank'>Duran Duran - A View to a Kill</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Steve%20Winwood%20-%20Valerie' target='_blank'>Steve Winwood - Valerie</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Bon%20Jovi%20-%20You%20Give%20Love%20A%20Bad%20Name' target='_blank'>Bon Jovi - You Give Love A Bad Name</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Midge%20Ure%20-%20If%20I%20Was' target='_blank'>Midge Ure - If I Was</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Duran%20Duran%20-%20A%20View%20to%20a%20Kill' target='_blank'>Duran Duran - A View to a Kill</a></li>
+<li><a href='https://open.spotify.com/search/Steve%20Winwood%20-%20Valerie' target='_blank'>Steve Winwood - Valerie</a></li>
+<li><a href='https://open.spotify.com/search/Bon%20Jovi%20-%20You%20Give%20Love%20A%20Bad%20Name' target='_blank'>Bon Jovi - You Give Love A Bad Name</a></li>
+<li><a href='https://open.spotify.com/search/Midge%20Ure%20-%20If%20I%20Was' target='_blank'>Midge Ure - If I Was</a></li>
 <li><a href='https://open.spotify.com/search/Magnus%20Uggla%20-%20Astrologen' target='_blank'>Magnus Uggla - Astrologen</a></li>
 <li><a href='https://open.spotify.com/search/Snap%20-%20Rhythm%20Is%20A%20Dancer' target='_blank'>Snap - Rhythm Is A Dancer</a></li>
 <li><a href='https://open.spotify.com/search/Patrick%20Swayze%20-%20She%27s%20Like%20the%20Wind' target='_blank'>Patrick Swayze - She's Like the Wind</a></li>
@@ -83,6 +98,9 @@
 <li><a href='https://open.spotify.com/search/Carlene%20Carter%20-%20Every%20Little%20Thing' target='_blank'>Carlene Carter - Every Little Thing</a></li>
 <li><a href='https://open.spotify.com/search/Phil%20Collins%20-%20Against%20All%20Odds' target='_blank'>Phil Collins - Against All Odds</a></li>
 
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>

@@ -1,27 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>RIX FM</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 RIX FM</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>RIX FM</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>Sophie Ellis-Bextor - Murder On the Dancefloor</b><br>
+      Senaste NY låt i historiken: <b>Tiesto - The Business</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>Jennifer Lopez - On the Floor</b><br>
-    Senaste NY låt i historiken: <b>Bruno Mars - I Just Might</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
+<li><a href='https://open.spotify.com/search/Tiesto%20-%20The%20Business' target='_blank'>Tiesto - The Business</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Kygo%20%26%20Sandro%20Cavazza%20-%20Hold%20On%20Me' target='_blank'>Kygo & Sandro Cavazza - Hold On Me</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Victor%20Leksell%20-%20V%C3%A4ntat' target='_blank'>Victor Leksell - Väntat</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Sophie%20Ellis-Bextor%20-%20Murder%20On%20the%20Dancefloor' target='_blank'>Sophie Ellis-Bextor - Murder On the Dancefloor</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Bruno%20Mars%20-%20I%20Just%20Might' target='_blank'>Bruno Mars - I Just Might</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Artemas%20-%20I%20Like%20The%20Way%20You%20Kiss%20Me' target='_blank'>Artemas - I Like The Way You Kiss Me</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Jennifer%20Lopez%20-%20On%20the%20Floor' target='_blank'>Jennifer Lopez - On the Floor</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Robyn%20-%20Hang%20with%20Me' target='_blank'>Robyn - Hang with Me</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/September%20-%20Cry%20For%20You' target='_blank'>September - Cry For You</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Artemas%20-%20I%20Like%20The%20Way%20You%20Kiss%20Me' target='_blank'>Artemas - I Like The Way You Kiss Me</a></li>
+<li><a href='https://open.spotify.com/search/Jennifer%20Lopez%20-%20On%20the%20Floor' target='_blank'>Jennifer Lopez - On the Floor</a></li>
+<li><a href='https://open.spotify.com/search/Robyn%20-%20Hang%20with%20Me' target='_blank'>Robyn - Hang with Me</a></li>
+<li><a href='https://open.spotify.com/search/September%20-%20Cry%20For%20You' target='_blank'>September - Cry For You</a></li>
 <li><a href='https://open.spotify.com/search/Ed%20Sheeran%20-%20Azizam' target='_blank'>Ed Sheeran - Azizam</a></li>
 <li><a href='https://open.spotify.com/search/Luis%20Fonsi%20%26%20Demi%20Lovato%20-%20%C3%89chame%20La%20Culpa' target='_blank'>Luis Fonsi & Demi Lovato - Échame La Culpa</a></li>
 <li><a href='https://open.spotify.com/search/Norlie%20%26%20KKV%20-%20Tr%C3%B6jan%20du%20hatar' target='_blank'>Norlie & KKV - Tröjan du hatar</a></li>
@@ -76,6 +91,9 @@
 <li><a href='https://open.spotify.com/search/Mark%20Ambor%20-%20Belong%20Together' target='_blank'>Mark Ambor - Belong Together</a></li>
 <li><a href='https://open.spotify.com/search/One%20Direction%20-%20Story%20of%20My%20Life' target='_blank'>One Direction - Story of My Life</a></li>
 
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>

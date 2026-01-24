@@ -1,22 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>NRJ Sweden</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 NRJ Sweden</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>NRJ Sweden</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>Inga låtar från API</b><br>
+      Senaste NY låt i historiken: <b>Blood Running - Ray Dalton</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>Inga låtar från API</b><br>
-    Senaste NY låt i historiken: <b>Blood Running - Ray Dalton</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
 <li><a href='https://open.spotify.com/search/Blood%20Running%20-%20Ray%20Dalton' target='_blank'>Blood Running - Ray Dalton</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Children%20-%20Robert%20Miles' target='_blank'>Children - Robert Miles</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Golden%20-%20Huntr/x%2Cejae%2C%20Audrey%20Nuna%2C%20Rei%20Ami%2C%20Kpop%20Demon%20Hunters%20Cast' target='_blank'>Golden - Huntr/x,ejae, Audrey Nuna, Rei Ami, Kpop Demon Hunters Cast</a><span class='new-flag'>NY!</span></li>
@@ -54,6 +65,9 @@
 <li><a href='https://open.spotify.com/search/Paradise%20-%20Dj%20Snake%20With%20Bipolar%20Sunshine' target='_blank'>Paradise - Dj Snake With Bipolar Sunshine</a></li>
 <li><a href='https://open.spotify.com/search/Real%20Slim%20Shady%20-%20eminem' target='_blank'>Real Slim Shady - eminem</a></li>
 
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>

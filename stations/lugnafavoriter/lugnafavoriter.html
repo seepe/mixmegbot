@@ -1,27 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>Lugna Favoriter</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 Lugna Favoriter</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>Lugna Favoriter</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>Maroon 5 - Memories</b><br>
+      Senaste NY låt i historiken: <b>Céline Dion - All By Myself</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>Erik Segerstedt - Show Me What Love Is</b><br>
-    Senaste NY låt i historiken: <b>Savage Garden - To the Moon & Back</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
+<li><a href='https://open.spotify.com/search/C%C3%A9line%20Dion%20-%20All%20By%20Myself' target='_blank'>Céline Dion - All By Myself</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Ella%20Tiritiello%20-%20Bara%20du%20%C3%A4r%20d%C3%A4r' target='_blank'>Ella Tiritiello - Bara du är där</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/The%20Police%20-%20Every%20Breath%20You%20Take' target='_blank'>The Police - Every Breath You Take</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Maroon%205%20-%20Memories' target='_blank'>Maroon 5 - Memories</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Savage%20Garden%20-%20To%20the%20Moon%20%26%20Back' target='_blank'>Savage Garden - To the Moon & Back</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Erik%20Segerstedt%20-%20Show%20Me%20What%20Love%20Is' target='_blank'>Erik Segerstedt - Show Me What Love Is</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Tina%20Turner%20-%20The%20Best' target='_blank'>Tina Turner - The Best</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Mariah%20Carey%20-%20Without%20You' target='_blank'>Mariah Carey - Without You</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Ed%20Sheeran%20-%20Shape%20of%20You' target='_blank'>Ed Sheeran - Shape of You</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Erik%20Segerstedt%20-%20Show%20Me%20What%20Love%20Is' target='_blank'>Erik Segerstedt - Show Me What Love Is</a></li>
+<li><a href='https://open.spotify.com/search/Tina%20Turner%20-%20The%20Best' target='_blank'>Tina Turner - The Best</a></li>
+<li><a href='https://open.spotify.com/search/Mariah%20Carey%20-%20Without%20You' target='_blank'>Mariah Carey - Without You</a></li>
+<li><a href='https://open.spotify.com/search/Ed%20Sheeran%20-%20Shape%20of%20You' target='_blank'>Ed Sheeran - Shape of You</a></li>
 <li><a href='https://open.spotify.com/search/Jan%20Johansen%20-%20Se%20P%C3%A5%20Mig' target='_blank'>Jan Johansen - Se På Mig</a></li>
 <li><a href='https://open.spotify.com/search/Hozier%20-%20Take%20Me%20To%20Church' target='_blank'>Hozier - Take Me To Church</a></li>
 <li><a href='https://open.spotify.com/search/Billie%20Eilish%20-%20BIRDS%20OF%20A%20FEATHER' target='_blank'>Billie Eilish - BIRDS OF A FEATHER</a></li>
@@ -80,6 +95,9 @@
 <li><a href='https://open.spotify.com/search/Dean%20Lewis%20-%20How%20Do%20I%20Say%20Goodbye' target='_blank'>Dean Lewis - How Do I Say Goodbye</a></li>
 <li><a href='https://open.spotify.com/search/C%C3%A9line%20Dion%20-%20It%27s%20All%20Coming%20Back%20to%20Me%20Now' target='_blank'>Céline Dion - It's All Coming Back to Me Now</a></li>
 
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>

@@ -1,27 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>Bandit Rock</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 Bandit Rock</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>Bandit Rock</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>Bruce Springsteen - Hungry Heart</b><br>
+      Senaste NY låt i historiken: <b>Korslagda Kukar - Holmgren Refererar</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>Billy Idol - Cradle of Love</b><br>
-    Senaste NY låt i historiken: <b>Staind - It's Been A While</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
+<li><a href='https://open.spotify.com/search/Korslagda%20Kukar%20-%20Holmgren%20Refererar' target='_blank'>Korslagda Kukar - Holmgren Refererar</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/The%20Killers%20-%20Human' target='_blank'>The Killers - Human</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Bruce%20Springsteen%20-%20Hungry%20Heart' target='_blank'>Bruce Springsteen - Hungry Heart</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Staind%20-%20It%27s%20Been%20A%20While' target='_blank'>Staind - It's Been A While</a><span class='new-flag'>NY!</span></li>
 <li><a href='https://open.spotify.com/search/Billy%20Idol%20-%20Cradle%20of%20Love' target='_blank'>Billy Idol - Cradle of Love</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Aerosmith%20-%20Janie%27s%20Got%20a%20Gun' target='_blank'>Aerosmith - Janie's Got a Gun</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Joan%20Jett%20%26%20Joan%20Jett%20%26%20The%20Blackhearts%20-%20Bad%20Reputation' target='_blank'>Joan Jett & Joan Jett & The Blackhearts - Bad Reputation</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Volbeat%20-%20By%20A%20Monster%27s%20Hand' target='_blank'>Volbeat - By A Monster's Hand</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Aerosmith%20-%20Janie%27s%20Got%20a%20Gun' target='_blank'>Aerosmith - Janie's Got a Gun</a></li>
+<li><a href='https://open.spotify.com/search/Joan%20Jett%20%26%20Joan%20Jett%20%26%20The%20Blackhearts%20-%20Bad%20Reputation' target='_blank'>Joan Jett & Joan Jett & The Blackhearts - Bad Reputation</a></li>
+<li><a href='https://open.spotify.com/search/Volbeat%20-%20By%20A%20Monster%27s%20Hand' target='_blank'>Volbeat - By A Monster's Hand</a></li>
 <li><a href='https://open.spotify.com/search/Foo%20Fighters%20-%20The%20Pretender' target='_blank'>Foo Fighters - The Pretender</a></li>
 <li><a href='https://open.spotify.com/search/Def%20Leppard%20-%20Love%20Bites' target='_blank'>Def Leppard - Love Bites</a></li>
 <li><a href='https://open.spotify.com/search/M%C3%A5neskin%20-%20SUPERMODEL' target='_blank'>Måneskin - SUPERMODEL</a></li>
@@ -103,6 +117,9 @@
 <li><a href='https://open.spotify.com/search/The%20Connells%20-%2074-75' target='_blank'>The Connells - 74-75</a></li>
 <li><a href='https://open.spotify.com/search/H.e.a.t%20-%20Back%20to%20the%20Rhythm' target='_blank'>H.e.a.t - Back to the Rhythm</a></li>
 
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>
