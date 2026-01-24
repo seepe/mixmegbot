@@ -45,7 +45,6 @@ def update_history(station_id, songs):
         old = []
 
     combined = list(dict.fromkeys(old + songs))
-
     combined = combined[-500:]
 
     with open(path, "w", encoding="utf-8") as f:
@@ -89,7 +88,6 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
 
-        # ⭐ NYASTE → ÄLDSTA
         for index, raw in enumerate(reversed(songs)):
             encoded = urllib.parse.quote(raw)
             spotify_url = f"https://open.spotify.com/search/{encoded}"
@@ -110,18 +108,32 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
 def generate_index_html(timestamp):
     html_path = "stations/index.html"
 
-    html = f"""<html>
+    html = f"""<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>Radiostationer</title>
 <link rel="stylesheet" href="stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<h1 class="index-title">Radiostationer</h1>
-<div class="timestamp">Senast uppdaterad: {timestamp}</div>
+<body class="dark">
 
-<div class="container">
+<nav class="navbar">
+  <div class="logo">📻 Radiostationer</div>
+  <div class="nav-right">
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
+    <h1>Radiostationer</h1>
+    <p class="timestamp">Senast uppdaterad: {timestamp}</p>
+  </header>
+
+  <section class="station-grid">
 """
 
     for station_id, station_name in STATIONS.items():
@@ -130,14 +142,18 @@ def generate_index_html(timestamp):
         dot_class = "green" if exists else "red"
 
         html += f"""
-<a class="station" href="{station_id}/{station_id}.html">
-    <div class="dot {dot_class}"></div>
-    {station_name}
-</a>
+    <a class="station-card" href="{station_id}/{station_id}.html">
+      <span class="dot {dot_class}"></span>
+      <span class="station-name">{station_name}</span>
+    </a>
 """
 
     html += """
-</div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
 """
@@ -145,6 +161,10 @@ def generate_index_html(timestamp):
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
 
+
+# -----------------------------
+# MAIN SCRIPT
+# -----------------------------
 
 timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%H:%M")
 
