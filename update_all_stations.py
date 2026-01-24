@@ -56,29 +56,43 @@ def update_history(station_id, songs):
 def generate_station_html(station_id, station_name, songs, api_latest, history_latest):
     html_path = f"stations/{station_id}/{station_id}.html"
 
-    html_top = f"""<html>
+    html_top = f"""<!DOCTYPE html>
+<html lang="sv">
 <head>
 <meta charset='UTF-8'>
 <title>{station_name}</title>
 <link rel="stylesheet" href="../stations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<div class="header">
+<body class="dark">
+
+<nav class="navbar">
+  <div class="logo">📻 {station_name}</div>
+  <div class="nav-right">
+    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+  </div>
+</nav>
+
+<main class="content">
+
+  <header class="header-area">
     <h1>{station_name}</h1>
-    <div class="underline"></div>
-</div>
+    <p class="timestamp">
+      Senaste låt från API:t: <b>{api_latest}</b><br>
+      Senaste NY låt i historiken: <b>{history_latest}</b>
+    </p>
+  </header>
 
-<div class="info">
-    Senaste låt från API:t: <b>{api_latest}</b><br>
-    Senaste NY låt i historiken: <b>{history_latest}</b>
-</div>
-
-<ul class="songlist">
+  <ul class="songlist">
 """
 
     html_bottom = """
-</ul>
+  </ul>
+
+  <script src="../script.js"></script>
+</main>
 </body>
 </html>
 """
@@ -88,6 +102,7 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
 
+        # NYASTE → ÄLDSTA
         for index, raw in enumerate(reversed(songs)):
             encoded = urllib.parse.quote(raw)
             spotify_url = f"https://open.spotify.com/search/{encoded}"
