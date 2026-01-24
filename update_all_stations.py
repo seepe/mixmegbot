@@ -68,7 +68,7 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
 <body class="dark">
 
 <nav class="navbar">
-  <div class="logo">📻 {station_name}</div>
+  <div class="logo">📻</div>
   <div class="nav-right">
     <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
     <button id="theme-toggle" class="theme-btn">🌓</button>
