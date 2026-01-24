@@ -1,4 +1,5 @@
 import requests
+import os
 
 URL = "https://prod.radio-api.net/stations/mixmegapol/songs"
 
@@ -13,7 +14,6 @@ headers = {
 def fetch_songs():
     response = requests.get(URL, headers=headers, timeout=10)
     response.raise_for_status()
-
     data = response.json()
 
     songs = []
@@ -24,21 +24,23 @@ def fetch_songs():
 
     return songs
 
-# Hämta nya låtar
+# Hämta nya låtar från API
 new_songs = fetch_songs()
 
-# Läs gamla låtar
-try:
+# Läs gamla låtar från mixmeg.txt om den finns
+if os.path.exists("mixmeg.txt"):
     with open("mixmeg.txt", "r", encoding="utf-8") as f:
         old_songs = [line.strip() for line in f if line.strip()]
-except FileNotFoundError:
+else:
     old_songs = []
 
-# Kombinera och ta bort dubbletter (behåll ordning)
-combined = list(dict.fromkeys(new_songs + old_songs))
+# Kombinera: gamla först, sedan nya
+combined = list(dict.fromkeys(old_songs + new_songs))
 
-# Spara
+# Spara tillbaka
 with open("mixmeg.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(combined))
 
-print(f"Uppdaterade mixmeg.txt med {len(new_songs)} nya låtar, totalt {len(combined)} i historiken.")
+print(f"Gamla låtar: {len(old_songs)}")
+print(f"Nya låtar från API: {len(new_songs)}")
+print(f"Totalt i mixmeg.txt: {len(combined)}")
