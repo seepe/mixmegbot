@@ -7,7 +7,7 @@ STATIONS = {
     "mixmegapol": "Mix Megapol",
     "banditrock": "Bandit Rock",
     "starfmse": "Star FM",
-    "rixfmse": "RIX FM",
+    "rixfm": "RIX FM",
     "nrjsweden": "NRJ Sweden",
     "lugnafavoriter": "Lugna Favoriter"
 }
