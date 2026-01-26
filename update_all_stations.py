@@ -68,7 +68,7 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
 <body class="dark">
 
 <nav class="navbar">
-  <div class="logo">📻</div>
+  <a href="/" class="logo">📻</a>
   <div class="nav-right">
     <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
     <button id="theme-toggle" class="theme-btn">🌓</button>
@@ -135,7 +135,7 @@ def generate_index_html(timestamp):
 <body class="dark">
 
 <nav class="navbar">
-  <div class="logo">📻</div>
+  <a href="/" class="logo">📻</a>
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
