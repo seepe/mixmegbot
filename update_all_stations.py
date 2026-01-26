@@ -45,7 +45,7 @@ def update_history(station_id, songs):
         old = []
 
     combined = list(dict.fromkeys(old + songs))
-    combined = combined[-500:]
+    combined = combined[-100:]
 
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(combined))
@@ -199,7 +199,7 @@ for station_id, station_name in STATIONS.items():
     api_latest = songs[0] if songs else "Inga låtar från API"
     history_latest = history[-1] if history else "Ingen historik"
 
-    limited_history = history[-500:]
+    limited_history = history[-100:]
 
     generate_station_html(station_id, station_name, limited_history, api_latest, history_latest)
 
