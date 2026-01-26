@@ -139,6 +139,24 @@ def generate_index_html(timestamp):
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
+  <div id="spotlistrHeaderTool" style="display:flex; gap:8px; align-items:center;">
+  <select id="stationSelect" class="pantex-select" style="height:36px;">
+    <option value="">🎵 Välj station</option>
+    <option value="banditrock">Bandit Rock</option>
+    <option value="lugnafavoriter">Lugna Favoriter</option>
+    <option value="mixmegapol">Mix Megapol</option>
+    <option value="nrjsweden">NRJ Sweden</option>
+    <option value="rixfm">Rix FM</option>
+    <option value="starfmse">Star FM</option>
+  </select>
+
+  <button id="createPlaylistBtn" class="btn-accent" style="height:36px; padding:0 16px;">
+    Spotlistr
+  </button>
+
+</div>
+
+<div id="spotlistrPopup" style="display:none;"></div>
 </nav>
 
 <main class="content">
