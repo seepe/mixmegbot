@@ -2,7 +2,7 @@ name: Update Radio Stations
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "* */24 * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [run-update]
