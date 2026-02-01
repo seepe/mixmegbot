@@ -188,7 +188,7 @@ def generate_index_html(timestamp):
   <!-- Hidden trigger button -->
   <div class="trigger-wrapper">
     <button class="trigger-btn" onclick="fetch('trigger.php').then(()=>alert('Uppdatering skickad!'))">
-      ⟳ Uppdatera
+      ⟳ Hämta ny data
     </button>
   </div>
 
@@ -206,7 +206,7 @@ def generate_index_html(timestamp):
 # MAIN SCRIPT
 # -----------------------------
 
-timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%H:%M")
+timestamp = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%Y-%m-%d %H:%M")
 
 for station_id, station_name in STATIONS.items():
     print(f"Uppdaterar {station_name}...")
