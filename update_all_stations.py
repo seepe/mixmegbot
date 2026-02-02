@@ -143,7 +143,7 @@ def generate_index_html(timestamp):
   <!-- Gamla dropdownen (Spotlistr) – orörd -->
   <div id="spotlistrHeaderTool" style="display:flex; gap:8px; align-items:center;">
     <select id="stationSelect" class="pantex-select" style="height:36px;">
-      <option value="">🎵 Välj station</option>
+      <option value="">🎵</option>
       <option value="banditrock">Bandit Rock</option>
       <option value="lugnafavoriter">Lugna Favoriter</option>
       <option value="mixmegapol">Mix Megapol</option>
@@ -176,10 +176,10 @@ def generate_index_html(timestamp):
     </div>
 
     <select id="liveStationSelect" class="live-select">
-      <option value="">Välj SR-kanal</option>
-      <option value="p2">P2 – Sveriges Radio</option>
-      <option value="p3">P3 – Sveriges Radio</option>
-      <option value="p4sth">P4 Stockholm – Sveriges Radio</option>
+      <option value="">📻</option>
+      <option value="p2">P2</option>
+      <option value="p3">P3</option>
+      <option value="p4sth">P4</option>
     </select>
 
     <button class="live-play-btn" id="livePlayToggle">▶</button>
