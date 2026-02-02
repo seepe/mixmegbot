@@ -140,6 +140,8 @@ def generate_index_html(timestamp):
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
+
+  <!-- Gamla dropdownen (Spotlistr) – orörd -->
   <div id="spotlistrHeaderTool" style="display:flex; gap:8px; align-items:center;">
     <select id="stationSelect" class="pantex-select" style="height:36px;">
       <option value="">🎵 Välj station</option>
@@ -149,7 +151,6 @@ def generate_index_html(timestamp):
       <option value="nrjsweden">NRJ Sweden</option>
       <option value="rixfm">Rix FM</option>
       <option value="starfmse">Star FM</option>
-      <option value="p2">P2 – Sveriges Radio</option>
     </select>
 
     <button id="createPlaylistBtn" class="btn-accent" style="height:36px; padding:0 16px;">
@@ -167,24 +168,33 @@ def generate_index_html(timestamp):
     <p class="timestamp">Senast uppdaterad: {timestamp}</p>
   </header>
 
-  <!-- ⭐ NY KOMPAKT LIVE-RADIO HÖGST UPP -->
+  <!-- ⭐ NY PREMIUM LIVE-RADIO HÖGST UPP -->
   <section class="live-radio-top">
-    <div class="live-radio-inner">
+    <div class="live-radio-left">
       <span class="live-dot"></span>
       <span id="liveStationName">Ingen station vald</span>
-
-      <audio id="liveAudio" preload="none">
-        <source id="liveSource" src="" type="audio/aac">
-      </audio>
-
-      <button class="live-play-btn" id="livePlayToggle">▶</button>
+      <div class="live-eq"><div></div><div></div><div></div></div>
     </div>
+
+    <select id="liveStationSelect" class="live-select">
+      <option value="">Välj SR-kanal</option>
+      <option value="p2">P2 – Sveriges Radio</option>
+      <option value="p3">P3 – Sveriges Radio</option>
+      <option value="p4sth">P4 Stockholm – Sveriges Radio</option>
+    </select>
+
+    <button class="live-play-btn" id="livePlayToggle">▶</button>
+
+    <audio id="liveAudio" preload="none" playsinline webkit-playsinline>
+      <source id="liveSource" src="" type="audio/aac">
+    </audio>
   </section>
   <!-- ⭐ SLUT PÅ NY LIVE-RADIO -->
 
   <section class="station-grid">
 """
 
+    # Station cards
     for station_id, station_name in STATIONS.items():
         html_file = f"stations/{station_id}/{station_id}.html"
         exists = os.path.exists(html_file)
