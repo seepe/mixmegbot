@@ -15,6 +15,8 @@
   <div class="nav-right">
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
+
+  <!-- Gamla dropdownen (Spotlistr) – orörd -->
   <div id="spotlistrHeaderTool" style="display:flex; gap:8px; align-items:center;">
     <select id="stationSelect" class="pantex-select" style="height:36px;">
       <option value="">🎵 Välj station</option>
@@ -24,7 +26,6 @@
       <option value="nrjsweden">NRJ Sweden</option>
       <option value="rixfm">Rix FM</option>
       <option value="starfmse">Star FM</option>
-      <option value="p2">P2 – Sveriges Radio</option>
     </select>
 
     <button id="createPlaylistBtn" class="btn-accent" style="height:36px; padding:0 16px;">
@@ -39,21 +40,29 @@
 
   <header class="header-area">
     <h1>Radiostationer</h1>
-    <p class="timestamp">Senast uppdaterad: 2026-02-02 13:24</p>
+    <p class="timestamp">Senast uppdaterad: 2026-02-02 15:32</p>
   </header>
 
-  <!-- ⭐ NY KOMPAKT LIVE-RADIO HÖGST UPP -->
+  <!-- ⭐ NY PREMIUM LIVE-RADIO HÖGST UPP -->
   <section class="live-radio-top">
-    <div class="live-radio-inner">
+    <div class="live-radio-left">
       <span class="live-dot"></span>
       <span id="liveStationName">Ingen station vald</span>
-
-      <audio id="liveAudio" preload="none">
-        <source id="liveSource" src="" type="audio/aac">
-      </audio>
-
-      <button class="live-play-btn" id="livePlayToggle">▶</button>
+      <div class="live-eq"><div></div><div></div><div></div></div>
     </div>
+
+    <select id="liveStationSelect" class="live-select">
+      <option value="">Välj SR-kanal</option>
+      <option value="p2">P2 – Sveriges Radio</option>
+      <option value="p3">P3 – Sveriges Radio</option>
+      <option value="p4sth">P4 Stockholm – Sveriges Radio</option>
+    </select>
+
+    <button class="live-play-btn" id="livePlayToggle">▶</button>
+
+    <audio id="liveAudio" preload="none" playsinline webkit-playsinline>
+      <source id="liveSource" src="" type="audio/aac">
+    </audio>
   </section>
   <!-- ⭐ SLUT PÅ NY LIVE-RADIO -->
 
