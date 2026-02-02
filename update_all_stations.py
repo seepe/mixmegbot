@@ -123,7 +123,8 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
 def generate_index_html(timestamp):
     html_path = "stations/index.html"
 
-    html = f"""<!DOCTYPE html>
+    html = f"""
+<!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta charset='UTF-8'>
@@ -140,23 +141,23 @@ def generate_index_html(timestamp):
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
   <div id="spotlistrHeaderTool" style="display:flex; gap:8px; align-items:center;">
-  <select id="stationSelect" class="pantex-select" style="height:36px;">
-    <option value="">🎵 Välj station</option>
-    <option value="banditrock">Bandit Rock</option>
-    <option value="lugnafavoriter">Lugna Favoriter</option>
-    <option value="mixmegapol">Mix Megapol</option>
-    <option value="nrjsweden">NRJ Sweden</option>
-    <option value="rixfm">Rix FM</option>
-    <option value="starfmse">Star FM</option>
-  </select>
+    <select id="stationSelect" class="pantex-select" style="height:36px;">
+      <option value="">🎵 Välj station</option>
+      <option value="banditrock">Bandit Rock</option>
+      <option value="lugnafavoriter">Lugna Favoriter</option>
+      <option value="mixmegapol">Mix Megapol</option>
+      <option value="nrjsweden">NRJ Sweden</option>
+      <option value="rixfm">Rix FM</option>
+      <option value="starfmse">Star FM</option>
+      <option value="p2">P2 – Sveriges Radio</option>
+    </select>
 
-  <button id="createPlaylistBtn" class="btn-accent" style="height:36px; padding:0 16px;">
-    Spotlistr
-  </button>
+    <button id="createPlaylistBtn" class="btn-accent" style="height:36px; padding:0 16px;">
+      Spotlistr
+    </button>
+  </div>
 
-</div>
-
-<div id="spotlistrPopup" style="display:none;"></div>
+  <div id="spotlistrPopup" style="display:none;"></div>
 </nav>
 
 <main class="content">
@@ -165,6 +166,21 @@ def generate_index_html(timestamp):
     <h1>Radiostationer</h1>
     <p class="timestamp">Senast uppdaterad: {timestamp}</p>
   </header>
+
+  <!-- ⭐ NY KOMPAKT LIVE-RADIO HÖGST UPP -->
+  <section class="live-radio-top">
+    <div class="live-radio-inner">
+      <span class="live-dot"></span>
+      <span id="liveStationName">Ingen station vald</span>
+
+      <audio id="liveAudio" preload="none">
+        <source id="liveSource" src="" type="audio/aac">
+      </audio>
+
+      <button class="live-play-btn" id="livePlayToggle">▶</button>
+    </div>
+  </section>
+  <!-- ⭐ SLUT PÅ NY LIVE-RADIO -->
 
   <section class="station-grid">
 """
