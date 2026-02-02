@@ -176,10 +176,10 @@ def generate_index_html(timestamp):
     </div>
 
     <select id="liveStationSelect" class="live-select">
-      <option value="">📻</option>
+      <option value="">📶</option>
       <option value="p2">P2</option>
       <option value="p3">P3</option>
-      <option value="p4sth">P4</option>
+      <option value="p4">P4</option>
     </select>
 
     <button class="live-play-btn" id="livePlayToggle">▶</button>
