@@ -11,7 +11,6 @@ STATIONS = {
     "rixfm": "RIX FM",
     "nrjsweden": "NRJ Sweden",
     "lugnafavoriter": "Lugna Favoriter",
-    "p2": "P2 – Sveriges Radio"   # ⭐ NY!
 }
 
 BASE_URL = "https://prod.radio-api.net/stations/{}/songs"
