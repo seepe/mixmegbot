@@ -10,7 +10,8 @@ STATIONS = {
     "starfmse": "Star FM",
     "rixfm": "RIX FM",
     "nrjsweden": "NRJ Sweden",
-    "lugnafavoriter": "Lugna Favoriter"
+    "lugnafavoriter": "Lugna Favoriter",
+    "p2": "P2 – Sveriges Radio"   # ⭐ NY!
 }
 
 BASE_URL = "https://prod.radio-api.net/stations/{}/songs"
@@ -102,7 +103,6 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_top)
 
-        # NYASTE → ÄLDSTA
         for index, raw in enumerate(reversed(songs)):
             encoded = urllib.parse.quote(raw)
             spotify_url = f"https://open.spotify.com/search/{encoded}"
@@ -197,7 +197,6 @@ def generate_index_html(timestamp):
     </a>
 """
 
-    # 🔥 Här lägger vi trigger-knappen — korrekt placerad och inuti strängen
     html += """
   </section>
 
@@ -217,6 +216,7 @@ def generate_index_html(timestamp):
 
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html)
+
 
 # -----------------------------
 # MAIN SCRIPT
