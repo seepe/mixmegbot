@@ -234,15 +234,12 @@ def generate_index_html(timestamp):
         <option value="p3">P3</option>
         <option value="p4sth">P4</option>
       </select>
-
-      <div id="miniEq" class="mini-eq">
-        <div></div><div></div><div></div>
-      </div>
-
+      
     </div>
   </div>
 
   <div class="mini-controls">
+    <button id="miniPopout" class="mini-icon-btn">🗗</button>
     <button id="miniExpandToggle" class="mini-icon-btn">⌃</button>
     <button id="miniVolumeBtn" class="mini-icon-btn">🔊</button>
     <button id="miniPlayToggle" class="mini-btn">▶</button>
