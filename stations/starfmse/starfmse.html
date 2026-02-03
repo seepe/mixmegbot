@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset='UTF-8'>
-<title>Star FM</title>
-<link rel="stylesheet" href="../stations.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Star FM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../stations.css">
 </head>
 
 <body class="dark">
 
+<!-- NAVBAR -->
 <nav class="navbar">
-  <a href="/" class="logo">📻</a>
+  <a href="../index.html" class="logo">⬅</a>
+
   <div class="nav-right">
-    <a href="../index.html" class="theme-btn" style="margin-right:10px;">⬅</a>
     <button id="theme-toggle" class="theme-btn">🌓</button>
   </div>
 </nav>
 
+<!-- MAIN CONTENT -->
 <main class="content">
 
   <header class="header-area">
     <h1>Star FM</h1>
     <p class="timestamp">
-      Senaste låt från API:t: <b>London Beat - I've Been Thinking About You</b><br>
-      Senaste NY låt i historiken: <b>UB40 -  Falling In Love With You</b>
+      Senaste låt från API:t: <b>Bryan Adams - Run to You</b><br>
+      Senaste NY låt i historiken: <b>Lisa Nilsson - Varje Gång Jag Ser Dig</b>
     </p>
   </header>
 
   <ul class="songlist">
-<li><a href='https://open.spotify.com/search/UB40%20-%20%20Falling%20In%20Love%20With%20You' target='_blank'>UB40 -  Falling In Love With You</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Madonna%20-%20Like%20a%20Virgin' target='_blank'>Madonna - Like a Virgin</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Kim%20Wilde%20-%20Kids%20In%20America' target='_blank'>Kim Wilde - Kids In America</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Carola%20-%20S%C3%A4g%20Mig%20Var%20Du%20St%C3%A5r' target='_blank'>Carola - Säg Mig Var Du Står</a><span class='new-flag'>NY!</span></li>
-<li><a href='https://open.spotify.com/search/Elton%20John%20-%20Your%20Song' target='_blank'>Elton John - Your Song</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Lisa%20Nilsson%20-%20Varje%20G%C3%A5ng%20Jag%20Ser%20Dig' target='_blank'>Lisa Nilsson - Varje Gång Jag Ser Dig</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Robin%20Beck%20-%20First%20Time' target='_blank'>Robin Beck - First Time</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Lili%20%26%20Susie%20-%20Oh%20Mama' target='_blank'>Lili & Susie - Oh Mama</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Ace%20of%20Base%20-%20All%20That%20She%20Wants' target='_blank'>Ace of Base - All That She Wants</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/Bryan%20Adams%20-%20Run%20to%20You' target='_blank'>Bryan Adams - Run to You</a><span class='new-flag'>NY!</span></li>
+<li><a href='https://open.spotify.com/search/UB40%20-%20%20Falling%20In%20Love%20With%20You' target='_blank'>UB40 -  Falling In Love With You</a></li>
+<li><a href='https://open.spotify.com/search/Madonna%20-%20Like%20a%20Virgin' target='_blank'>Madonna - Like a Virgin</a></li>
+<li><a href='https://open.spotify.com/search/Kim%20Wilde%20-%20Kids%20In%20America' target='_blank'>Kim Wilde - Kids In America</a></li>
+<li><a href='https://open.spotify.com/search/Carola%20-%20S%C3%A4g%20Mig%20Var%20Du%20St%C3%A5r' target='_blank'>Carola - Säg Mig Var Du Står</a></li>
+<li><a href='https://open.spotify.com/search/Elton%20John%20-%20Your%20Song' target='_blank'>Elton John - Your Song</a></li>
 <li><a href='https://open.spotify.com/search/Bonnie%20Tyler%20-%20Holding%20Out%20For%20a%20Hero' target='_blank'>Bonnie Tyler - Holding Out For a Hero</a></li>
 <li><a href='https://open.spotify.com/search/Rick%20Astley%20-%20Together%20Forever' target='_blank'>Rick Astley - Together Forever</a></li>
 <li><a href='https://open.spotify.com/search/London%20Beat%20-%20I%27ve%20Been%20Thinking%20About%20You' target='_blank'>London Beat - I've Been Thinking About You</a></li>
@@ -123,15 +130,12 @@
 <li><a href='https://open.spotify.com/search/Modern%20Talking%20-%20Cheri%20Cheri%20Lady' target='_blank'>Modern Talking - Cheri Cheri Lady</a></li>
 <li><a href='https://open.spotify.com/search/Steve%20Miller%20Band%20-%20Abracadabra' target='_blank'>Steve Miller Band - Abracadabra</a></li>
 <li><a href='https://open.spotify.com/search/Freda%20-%20I%20En%20Annan%20Del%20Av%20V%C3%A4rlden' target='_blank'>Freda - I En Annan Del Av Världen</a></li>
-<li><a href='https://open.spotify.com/search/Kenny%20Loggins%20-%20Danger%20Zone' target='_blank'>Kenny Loggins - Danger Zone</a></li>
-<li><a href='https://open.spotify.com/search/Eriksson%20Glenmark%20-%20Upp%20%C3%96ver%20Mina%20%C3%96ron' target='_blank'>Eriksson Glenmark - Upp Över Mina Öron</a></li>
-<li><a href='https://open.spotify.com/search/Michael%20Jackson%20-%20Billie%20Jean' target='_blank'>Michael Jackson - Billie Jean</a></li>
-<li><a href='https://open.spotify.com/search/Fiction%20Factory%20-%20%20Heaven' target='_blank'>Fiction Factory -  Heaven</a></li>
-<li><a href='https://open.spotify.com/search/Wax%20-%20Bridge%20to%20Your%20Heart' target='_blank'>Wax - Bridge to Your Heart</a></li>
 
   </ul>
 
-  <script src="../script.js"></script>
 </main>
+
+<script src="../script.js"></script>
+
 </body>
 </html>
