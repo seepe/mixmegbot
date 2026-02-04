@@ -239,8 +239,6 @@ def generate_index_html(timestamp):
   </div>
 
   <div class="mini-controls">
-    <button id="miniPopout" class="mini-icon-btn">🗗</button>
-    <button id="miniExpandToggle" class="mini-icon-btn">⌃</button>
     <button id="miniVolumeBtn" class="mini-icon-btn">🔊</button>
     <button id="miniPlayToggle" class="mini-btn">▶</button>
 
@@ -254,6 +252,8 @@ def generate_index_html(timestamp):
   </audio>
 
 </div>
+
+<div id="miniPlayerLauncher" title="Öppna spelare">🎧</div>
 
 <script src="script.js"></script>
 
