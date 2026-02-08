@@ -206,7 +206,7 @@ def generate_index_html(timestamp):
 
 </main>
 
-<!-- MINI PLAYER -->
+<!-- MINI PLAYER 
 <div id="miniPlayer" class="mini-player">
 
   <div class="mini-left">
@@ -252,6 +252,7 @@ def generate_index_html(timestamp):
   </audio>
 
 </div>
+-->
 
 <div id="miniPlayerLauncher" title="Öppna spelare">🎧</div>
 
