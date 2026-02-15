@@ -66,6 +66,7 @@ def generate_station_html(station_id, station_name, songs, api_latest, history_l
   <title>{station_name}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../stations.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text x='0' y='24' font-size='24'>📻</text></svg>">
 </head>
 
 <body class="dark">
